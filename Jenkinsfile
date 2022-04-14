@@ -42,7 +42,7 @@ spec:
       steps {
         container('kaniko') {
           sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd`/src --cache=true \
-          --destination=hub.docker.com/repository/docker/water7878/httpserver:${DATED_GIT_HASH} \
+          --destination=cloudnativestg.azurecr.io/httpserver:${DATED_GIT_HASH} \
                   --insecure \
                   --skip-tls-verify  \
                   -v=debug'
